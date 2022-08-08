@@ -1,5 +1,6 @@
 package dio.gof;
 
+import dio.gof.facade.Facade;
 import dio.gof.singleton.EagerSingleton;
 import dio.gof.singleton.LazyHolderSingleton;
 import dio.gof.singleton.LazySingleton;
@@ -30,7 +31,9 @@ public class teste {
 
 
         /*
-                                        Strategy
+                                            Teste de Strategy
+                  o teste consiste em checar se, mudando o comportamento do robo, a sua forma de movimentação
+                  também se altera.
          */
 
         Comportamento normal = new ComportamentoNormal();
@@ -46,6 +49,11 @@ public class teste {
         robo.setComportamento(agressivo);
         robo.mover();
 
+        /*
+                                    Teste Facade
+         */
+        Facade facade = new Facade();
+        facade.migrarCliente("Robson", "13578934");
     }
 }
 
